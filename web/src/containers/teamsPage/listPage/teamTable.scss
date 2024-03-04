@@ -1,0 +1,26 @@
+@import '../../../sass/constants.scss';
+
+.page-teams {
+  .team-table {
+    width: 100%;
+
+    thead,
+    tbody {
+      border-bottom: 1px solid #9E9E9E;
+    }
+    th,
+    td {
+      padding: 3px 10px;
+    }
+
+    .cell-name {
+      font-weight: bold;
+    }
+
+    @media #{ $phone-media } {
+      td {
+        word-break: break-all;
+      }
+    }
+  }
+}

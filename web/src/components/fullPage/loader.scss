@@ -1,0 +1,102 @@
+@import '../../sass/constants.scss';
+
+.fullpage-loading-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  @media #{ $phone-media } {
+    background-color: #212121;
+  }
+  @media #{ $desktop-media } {
+    align-items: center;
+    background: #E0E0E0 url('../../images/full-page-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .main-container {
+    @media #{ $desktop-media } {
+      display: flex;
+      padding: 30px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+
+      @media #{ $phone-media } {
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .logo-and-text {
+        @media #{ $phone-media } {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .logo {
+          @media #{ $phone-media } {
+            width: 50px;
+            height: 50px;
+          }
+          @media #{ $desktop-media } {
+            width: 180px;
+            height: 180px;
+          }
+        }
+        .brand-text {
+          color: #EF6C00;
+          font-weight: bold;
+
+          @media #{ $phone-media } {
+            font-size: 18px;
+          }
+          @media #{ $desktop-media } {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 26px;
+          }
+        }
+      }
+    }
+    .loading-container {
+      color: #F57C00;
+
+      @media #{ $desktop-media } {
+        margin-left: 50px;
+        font-size: 180px;
+      }
+      @media #{ $phone-media } {
+        font-size: 110px;
+        text-align: center;
+      }
+    }
+    .error-container {
+      @media #{ $desktop-media } {
+        margin-left: 50px;
+      }
+      @media #{ $phone-media } {
+        display: flex;
+        justify-content: center;
+      }
+
+      .alert {
+        color: #FFFFFF;
+        background-color: #F44336;
+        border-color: #E53935;
+
+        @media #{ $desktop-media } {
+          width: 400px;
+        }
+        @media #{ $phone-media } {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

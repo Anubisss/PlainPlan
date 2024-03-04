@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "^8.9.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.207.0",
+    "bcrypt": "^1.0.3",
+    "connection-string": "^0.4.1",
+    "ejs": "^2.5.7",
+    "email-addresses": "^3.0.1",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.5",
+    "mysql2": "^1.5.2",
+    "restify": "^6.3.4",
+    "restify-cookies": "^0.2.5",
+    "restify-cors-middleware": "^1.1.0",
+    "restify-errors": "^6.0.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {}
+}

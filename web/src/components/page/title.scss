@@ -1,0 +1,12 @@
+@import '../../sass/constants.scss';
+
+.page-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E0E0E0;
+
+  @media #{ $phone-media } {
+    text-align: center;
+  }
+}

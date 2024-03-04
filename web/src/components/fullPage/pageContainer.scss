@@ -1,0 +1,7 @@
+@import '../../sass/constants.scss';
+
+.page-container {
+  max-width: #{ $desktop-page-max-width };
+  margin-left: auto;
+  margin-right: auto;
+}

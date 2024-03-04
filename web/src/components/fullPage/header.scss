@@ -1,0 +1,113 @@
+@import '../../sass/constants.scss';
+
+.header-nav {
+  background-color: #F57C00;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.9);
+
+  @media #{ $phone-media } {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  @media #{ $desktop-media } {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .main-container {
+    display: flex;
+    align-items: center;
+
+    @media #{ $phone-media } {
+      flex-wrap: wrap;
+    }
+    @media #{ $desktop-media } {
+      max-width: #{ $desktop-page-max-width };
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .logo-container {
+      .logo {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    .menu-container {
+      margin-left: 10px;
+      margin-right: auto;
+
+      ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+        @media #{ $phone-media } {
+          margin: 0;
+        }
+        @media #{ $desktop-media } {
+          margin: 0 0 0 30px;
+        }
+
+        li {
+          @media #{ $desktop-media } {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .profile-container {
+      @media #{ $phone-media } {
+        margin-right: 10px;
+      }
+      @media #{ $desktop-media } {
+        margin-right: 30px;
+      }
+
+      a {
+        display: block;
+      }
+      .avatar {
+        width: 22px;
+        height: 22px;
+        border-radius: 3px;
+        margin-right: 3px;
+      }
+    }
+    .logout-container {
+      @media #{ $phone-media } {
+        display: none;
+      }
+    }
+
+    a {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+    }
+    .menu-container,
+    .profile-container,
+    .logout-container
+    {
+      a {
+        @media #{ $phone-media } {
+          padding: 3px 5px;
+        }
+        @media #{ $desktop-media } {
+          padding: 5px 10px;
+        }
+
+        &:hover,
+        &:active {
+          background-color: #FFD180;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

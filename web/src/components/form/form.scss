@@ -1,0 +1,112 @@
+@import '../../sass/constants.scss';
+
+.pp-form {
+  .group {
+    margin-bottom: 15px;
+    font-size: 14px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+
+      @media #{ $phone-media } {
+        margin-left: 10px;
+      }
+    }
+    input {
+      display: block;
+      padding: 4px 8px;
+      border: 1px solid #BDBDBD;
+      border-radius: 3px;
+      background-color: #FFFFFF;
+
+      @media #{ $phone-media } {
+        width: 90%;
+        margin-left: 10px;
+      }
+      @media #{ $desktop-media } {
+        width: 400px;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #FFA726;
+        box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.1), 0 0 0 0.2em rgba(255, 145, 0, 0.35);
+      }
+    }
+    .value {
+      @media #{ $phone-media } {
+        width: 90%;
+        margin-left: 15px;
+      }
+    }
+
+    &.error {
+      label {
+        color: #DD2C00;
+      }
+      .error-message {
+        color: #DD2C00;
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 3px;
+
+        @media #{ $phone-media } {
+          margin-left: 10px;
+        }
+      }
+      input {
+        border-color: #DD2C00;
+      }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+    @media #{ $phone-media } {
+      flex-direction: column;
+    }
+
+    .pp-btn {
+      color: #FFFFFF;
+      background-color: #EF6C00;
+      border: 0;
+      box-shadow: none;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 6px 12px;
+
+      &:hover,
+      &:active {
+        background-color: #F57C00;
+      }
+
+      &.loading {
+        background-color: #757575;
+        color: #E0E0E0;
+
+        .fa-spinner {
+          margin-left: 5px;
+        }
+      }
+
+      @media #{ $phone-media } {
+        display: block;
+        width: 80%;
+        line-height: 25px;
+      }
+    }
+    .cancel-link {
+      @media #{ $phone-media } {
+        margin-top: 10px;
+      }
+      @media #{ $desktop-media } {
+        margin-left: 10px;
+      }
+    }
+  }
+}

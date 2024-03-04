@@ -1,0 +1,9 @@
+@import '../../../sass/constants.scss';
+
+.page-teams-new {
+  @media #{ $desktop-media} {
+    @media (max-width: #{ $desktop-page-max-width } + 10px) {
+      margin-left: 10px;
+    }
+  }
+}

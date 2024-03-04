@@ -1,0 +1,42 @@
+@import '../../../sass/constants.scss';
+
+.page-teams {
+  .page-title {
+    @media #{ $desktop-media} {
+      @media (max-width: #{ $desktop-page-max-width } + 10px) {
+        margin-left: 10px;
+      }
+    }
+  }
+  .action-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @media (max-width: #{ $desktop-page-max-width } + 20px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .btn {
+      font-size: 14px;
+    }
+    .refresh-button {
+      font-size: 30px;
+      border: 0;
+      background-color: inherit;
+      color: #000000;
+
+      &:hover {
+        color: #FF9800;
+        cursor: pointer;
+      }
+
+      &.refreshing {
+        color: #9E9E9E;
+        cursor: default;
+      }
+    }
+  }
+}

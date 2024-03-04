@@ -1,0 +1,102 @@
+@import '../../sass/constants.scss';
+
+@media #{ $desktop-media } {
+  .page-settings {
+    display: flex;
+
+    .navigation-container {
+      width: 20%;
+
+      @media (max-width: #{ $desktop-page-max-width } + 10px) {
+        margin-left: 10px;
+      }
+
+      .menu-title {
+        padding: 5px 10px;
+        margin-bottom: -1px;
+        border: 1px solid #BDBDBD;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #FFE0B2;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-weight: bold;
+
+        .menu-item {
+          display: block;
+          padding: 5px 10px;
+          margin-bottom: -1px;
+          border: 1px solid #BDBDBD;
+          color: #F57C00;
+
+          &:last-child {
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            margin-bottom: 0;
+          }
+
+          &:hover,
+          &:active {
+            text-decoration: none;
+          }
+
+          &.active {
+            background-color: #F57C00;
+            color: #FFFFFF;
+            border-color: #F57C00;
+            z-index: 1000;
+          }
+        }
+      }
+    }
+    .children-container {
+      width: 80%;
+      padding-top: 3px;
+      padding-left: 30px;
+    }
+  }
+}
+
+@media #{ $phone-media } {
+  .page-settings {
+    display: flex;
+    flex-direction: column;
+
+    .navigation-container {
+      order: 2;
+
+      .menu-title {
+        margin-top: 30px;
+        font-size: 18px;
+        text-align: center;
+      }
+      .menu {
+        text-align: center;
+        .menu-item {
+          display: block;
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 15px;
+
+          &:hover,
+          &:active {
+            text-decoration: none;
+          }
+
+          &.active {
+            background-color: #ff9800;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+    .children-container {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../../sass/constants.scss';
+
+@media #{ $desktop-media } {
+  .page-profile {
+    .form-container {
+      display: flex;
+      padding-right: 15px;
+
+      .avatar-container {
+        width: 150px;
+        margin-left: auto;
+
+        @media (max-width: 750px) {
+          width: 100px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .avatar-description-container {
+          .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+
+            @media (max-width: 750px) {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .description {
+            text-align: center;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{ $phone-media } {
+  .page-profile {
+    .form-container {
+      display: flex;
+      flex-direction: column;
+
+      form {
+        order: 2;
+      }
+      .avatar-container {
+        order: 1;
+        margin-bottom: 10px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          margin-left: 10px;
+        }
+        .avatar-description-container {
+          display: flex;
+          align-items: center;
+          width: 90%;
+
+          .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            margin-left: 15px;
+          }
+          .description {
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+$phone-max-width: 700px;
+$phone-media: '(max-width: #{ $phone-max-width })';
+
+$desktop-min-width: $phone-max-width + 1;
+$desktop-media: '(min-width: #{ $desktop-min-width })';
+
+$desktop-page-max-width: 1000px;

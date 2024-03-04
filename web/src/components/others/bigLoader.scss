@@ -1,0 +1,16 @@
+@import '../../sass/constants.scss';
+
+.big-loader-container {
+  .loading-container {
+    color: #F57C00;
+    text-align: center;
+
+    @media #{ $desktop-media } {
+      font-size: 180px;
+    }
+    @media #{ $phone-media } {
+      font-size: 110px;
+      text-align: center;
+    }
+  }
+}
